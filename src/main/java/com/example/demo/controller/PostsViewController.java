@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class PostsViewController {
     @Autowired
     PostService postsService;
+    /*public PostsViewController(@Autowired PostService postsService){
+        this.postsService=postsService;
+    }*/
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String list(Model model) {
         model.addAttribute("appName", "Моё супер приложение");
